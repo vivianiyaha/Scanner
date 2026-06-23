@@ -171,7 +171,7 @@ hr { border-color: #1a1a1a !important; margin: 20px 0 !important; }
 """, unsafe_allow_html=True)
 
 # ─── Constants ─────────────────────────────────────────────────────────────────
-FOREX_PAIRS = ["NZDUSD","AUDCHF","AUDUSD","AUDNZD","AUDCAD","NZDCHF","NZDCAD","NZDJPY","CADCHF"]
+FOREX_PAIRS = ["EURUSD","AUDCHF","AUDUSD","AUDNZD","AUDCAD","NZDCHF","NZDCAD","NZDJPY","CADCHF"]
 CRYPTO_PAIRS = ["LTCUSD","XRPUSD","BCHUSD"]
 SYNTHETIC = ["Boom 300","Boom 500","Boom 1000","Crash 300","Crash 500","Crash 1000",
              "Volatility 10","Volatility 25","Volatility 50","Volatility 75","Volatility 100"]
@@ -184,10 +184,10 @@ def generate_ohlc_data(pair, timeframe, n=100):
     """Generate realistic synthetic OHLC data for a given pair."""
     np.random.seed(hash(pair + timeframe) % (2**31))
     base_prices = {
-        "NZDUSD": 0.615, "AUDCHF": 0.570, "AUDUSD": 0.655,
+        "EURUSD": 1.14245, "AUDCHF": 0.570, "AUDUSD": 0.655,
         "AUDNZD": 1.075, "AUDCAD": 0.895, "NZDCHF": 0.520,
         "NZDCAD": 0.820, "NZDJPY": 91.5, "CADCHF": 0.685,
-        "LTCUSD": 85.0, "XRPUSD": 0.52, "BCHUSD": 380.0,
+        "LTCUSD": 44.0, "XRPUSD": 0.52, "BCHUSD": 380.0,
     }
     base = base_prices.get(pair, 1.0) if not any(s in pair for s in ["Boom","Crash","Volatility"]) else random.uniform(5000, 15000)
     
