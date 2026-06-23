@@ -1161,7 +1161,7 @@ def main():
                 struct = sig.get("structure", {})
                 support_levels = struct.get("support", [])
     sup_str = "<br>".join([f"• {fmt_price(s,pair)}" for s in support_levels]) or "—"
-                resistance_levels = struct.get("resistance", [])
+    resistance_levels = struct.get("resistance", [])
     res_str = "<br>".join([f"• {fmt_price(r,pair)}" for r in resistance_levels]) or "—"
                 st.markdown(f"""
                 <div style="background:#0a0a0a;border:1px solid #1a1a1a;border-radius:12px;padding:20px;">
