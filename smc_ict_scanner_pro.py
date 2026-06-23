@@ -171,7 +171,7 @@ hr { border-color: #1a1a1a !important; margin: 20px 0 !important; }
 """, unsafe_allow_html=True)
 
 # ─── Constants ─────────────────────────────────────────────────────────────────
-FOREX_PAIRS = ["EURUSD","AUDCHF","AUDUSD","AUDNZD","AUDCAD","NZDCHF","NZDCAD","NZDJPY","CADCHF"]
+FOREX_PAIRS = ["EURUSD","GBPUSD","USDJPY","AUDCHF","AUDUSD","AUDNZD","AUDCAD","NZDCHF","NZDCAD","NZDJPY","CADCHF"]
 CRYPTO_PAIRS = ["LTCUSD","XRPUSD","BCHUSD"]
 SYNTHETIC = ["Boom 300","Boom 500","Boom 1000","Crash 300","Crash 500","Crash 1000",
              "Volatility 10","Volatility 25","Volatility 50","Volatility 75","Volatility 100"]
@@ -188,9 +188,9 @@ _YF_MAP = {
 }
 
 # Binance symbols for crypto
-_CRYPTO_BINANCE = {"LTCUSD": "LTCUSDT", "XRPUSD": "XRPUSDT", "BCHUSD": "BCHUSDT"}
+_CRYPTO_BINANCE = {"LTCUSD": "LTCUSDT", "ETHUSD": "ETHUSDT", "XRPUSD": "XRPUSDT", "BCHUSD": "BCHUSDT"}
 # yfinance symbols for crypto
-_CRYPTO_YF      = {"LTCUSD": "LTC-USD",  "XRPUSD": "XRP-USD",  "BCHUSD": "BCH-USD"}
+_CRYPTO_YF      = {"LTCUSD": "LTC-USD", "ETHUSD": "ETH-USD", "XRPUSD": "XRP-USD",  "BCHUSD": "BCH-USD"}
 
 _BINANCE_BASE = "https://api.binance.com/api/v3"
 _BINANCE_INTERVAL = {"M15": "15m", "H1": "1h", "H4": "4h"}
