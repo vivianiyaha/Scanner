@@ -660,7 +660,9 @@ def build_chart(sig):
     fig = make_subplots(rows=2, cols=1, row_heights=[0.75, 0.25], shared_xaxes=True,
                         vertical_spacing=0.04)
 
-    # Candlesticks
+   st.write(df.columns.tolist())
+   st.dataframe(df.head())
+# Candlesticks
     fig.add_trace(go.Candlestick(
         x=x_axis, open=df["open"], high=df["high"], low=df["low"], close=df["close"],
         increasing_fillcolor="#00C851", increasing_line_color="#00C851",
